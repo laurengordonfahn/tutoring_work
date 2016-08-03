@@ -1,5 +1,5 @@
 # Question 1 take a number and sum all the numbers that come after it 
-
+"""
 def ask_for_num():
 	n = int(raw_input('Please, give me a number'))
 	return n
@@ -14,6 +14,22 @@ def sum_num_less_n():
 
 # driver code
 print sum_num_less_n
+"""
+# Code for question 1 :
+def ask_for_num():
+	n = int(raw_input("Please, give me a number"))
+	return n
+
+def sum_num_less_n(ask_for_num):
+	n= ask_for_num()
+	ans = 0
+	for x in range(0,n+1):
+		ans += x
+	return ans
+
+
+# driver code
+print sum_num_less_n(ask_for_num)
 
 
 
@@ -31,3 +47,4 @@ def largest_num_1(x, y, z):
 
 
 puts largest_num_1(3, 4, 5)
+# As mentioned before, change it in a way to get the numbers from user
