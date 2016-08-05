@@ -18,7 +18,11 @@ print sum_num_less_n
 
 
 # Question 2 take three numbers and return the largest of the three
-def largest_num_1(x, y, z):
+
+def largest_num_1():
+	x = ask_for_num()
+	y = ask_for_num()
+	z = ask_for_num()
 	if (x == int(x) and y == int(y) and z == int(z)):
 		if (x > y and x > z):
 			return print("x = "+  x + "is larger than y = "+ y  , "and z = "+  z)
@@ -30,4 +34,4 @@ def largest_num_1(x, y, z):
 
 
 
-puts largest_num_1(3, 4, 5)
+puts largest_num_1()

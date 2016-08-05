@@ -3,15 +3,16 @@
 # ask user to enter his firt name
 # print the users first and last name in order
 
-last_name = input('Enter your last name:')
-first_name = input('Enter your last name:')
+#NOTE that raw_input is needed other wise with just input the first line request for last
+#name runs but then gives the error! WHY????
+last_name = raw_input('Enter your last name:')
+first_name = raw_input('Enter your last name:')
 
 print "This is greeting 1"
 greeting_statement1 = 'Hello, {} {}, very nice to meet you'.format(first_name, last_name)
 print greeting_statement1
 
 #this gives ('Hello', 'Lauren', 'Gordon-Fahn', 'very nice to meet you.')
-print "This is greeting 2"
 greeting_statement2 = 'Hello', first_name, last_name, "very nice to meet you."
 print greeting_statement2
 
