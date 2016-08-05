@@ -30,3 +30,27 @@ if (day < 10)
 
 
 console.log(month + "-" + day + "-" + year);
+
+
+console.log("----------------")
+
+// print current day and time in the formate:
+// Today is: Firday. Current time is : 4 PM: 50:22
+
+day_array = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+
+day = day_array[getDay()]
+var time = 0;
+if (getHour > 12)
+	{time = (getHours()-12)/2)) + "PM";}
+elsif (getHour === 12)
+	{time = console.log ("The time is 12 PM")}
+else 
+	{time = console.log("The time is" + gethours() + "AM")}
+
+console.log("Today is" + day + "."+ "Current time is: " + time + getMinutes : getSeconds)
+
+
+
+
