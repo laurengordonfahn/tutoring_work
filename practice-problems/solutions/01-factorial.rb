@@ -6,20 +6,18 @@
 # Difficulty: easy.
 
 def factorial(n)
-	counter = 1
-	factorial_eq = n
-	
-	if (n == 0  || n == 1 )
-		return 1
-	elsif n > 0
-		while counter < n
-			factorial_eq = factorial_eq * (n - counter)
-			counter = counter + 1
-		end
-		return factorial_eq
-	else
-		puts "n must be n>= 0, this value #{n} does not comply."
-	end
+  if n < 0
+    return nil
+  end
+
+  result = 1
+  while n > 0
+    result = result * n
+
+    n -= 1
+  end
+
+  return result
 end
 
 # These are tests to check that your code is working. After writing
@@ -40,5 +38,3 @@ puts(
 puts(
   'factorial(4) == 24: ' + (factorial(4) == 24).to_s
 )
-
-

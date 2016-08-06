@@ -41,15 +41,26 @@ day_array = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "
 
 
 day = day_array[getDay()]
-var time = 0;
+var hour = 0;
 if (getHour > 12)
-	{time = (getHours()-12)/2)) + "PM";}
+	{hour = (getHours()-12)/2)) + "PM";}
 elsif (getHour === 12)
-	{time = console.log ("The time is 12 PM")}
+	{hour = console.log ("The time is 12 PM")}
 else 
-	{time = console.log("The time is" + gethours() + "AM")}
+	{hour = console.log("The time is" + gethours() + "AM")}
 
-console.log("Today is" + day + "."+ "Current time is: " + time + getMinutes : getSeconds)
+
+var minutes = (getMinutes())
+if(getMinutes() < 10)
+	{minutes = ("0" + minutes);}
+
+var seconds =  (getSeconds())
+if(getSeconds() < 10)
+	{ seconds = ("0" + seconds);}
+
+
+
+console.log("Today is" + day + "."+ "Current time is: " + hour + ":" + minutes  + ":" + seconds);
 
 
 
