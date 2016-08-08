@@ -6,6 +6,27 @@
 # Difficulty: easy.
 
 def palindrome?(string)
+	string_array = string.split("")
+	forward_counter = 0 
+	backward_counter = -1
+	
+	if string_array.length == 1 
+		return true
+	end
+
+	while (forward_counter < (string_array.length/2) && backward_counter > -(string_array.length/2))
+		if string[forward_counter] != string [backward_counter]
+			return false
+		else 
+			#string_array[forward_counter] == string_array[backward_counter]
+			return true
+		end
+
+		forward_counter +=1
+		backward_counter -=1
+	end
+
+
 end
 
 # These are tests to check that your code is working. After writing

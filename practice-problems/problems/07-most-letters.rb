@@ -5,6 +5,17 @@
 # Difficulty: medium.
 
 def nearby_az(string)
+	string_array = string.split("")
+	if (string_array.include?("a") && string_array.include?("z"))
+		if string_array.index("z") - string_array.index("a") <=3
+			return true
+		else
+			return false
+		end
+	else
+		return false
+	end
+
 end
 
 # These are tests to check that your code is working. After writing
