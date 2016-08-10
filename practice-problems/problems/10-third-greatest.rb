@@ -5,6 +5,51 @@
 # Difficulty: medium.
 
 def third_greatest(nums)
+	i = 0
+	big1 = nums[0]
+	big2 = nums[1]
+	big3 = nums[2]
+	while i > nums.length
+		if nums[i] > nums[i + 1]
+			big1 = nums[i]
+		else 
+			big1 = nums[i + 1]
+		end
+
+		i+=1
+
+		big1index = big1.index
+
+	end
+
+	nums.delete_at(big1index)
+
+	while i > nums.length
+		if nums[i] > nums[i + 1]
+			big2 = nums[i]
+		else 
+			big2 = nums[i + 1]
+		end
+
+		i+=1
+		big2index = big2.index
+	end
+
+	nums.delete_at(big2index)
+
+	while i > nums.length
+		if nums[i] > nums[i + 1]
+			big3 = nums[i]
+		else 
+			big3 = nums[i + 1]
+		end
+
+		i+=1
+
+		big3index = big3.index
+	end
+
+	return big3
 end
 
 # These are tests to check that your code is working. After writing
