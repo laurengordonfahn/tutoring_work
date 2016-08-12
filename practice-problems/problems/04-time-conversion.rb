@@ -10,7 +10,7 @@ def time_conversion(minutes)
 	if mins < 10
 		mins = "0#{mins}"
 	end
-	return("#{hrs}:#{mins}")
+	puts("#{hrs}:#{mins}")
 
 end
 

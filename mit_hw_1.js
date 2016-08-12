@@ -3,9 +3,9 @@
 var n = 3;
 var i = 1;
 
+
 var prime_array = new Array();
-//prime_array[0]=n;
-//console.log(prime_array);
+prime_array.push(2)
 
 while (prime_array.length < 1000)
 {
@@ -16,14 +16,15 @@ while (prime_array.length < 1000)
 		{
 			if (n%i === 0)
 			{
-				prime_array = prime_array.push(n);
+				break;
 				
 			}
-		}
-	}
 
-	n++;
+		}
+		prime_array = prime_array.push(n);
+		n ++;
+	}
 }
-console.log(n);
-console.log(prime_array[1]);
+
+console.log(prime_array);
 //console.log("this is the array of the first 1000 prime numbers" + prime_array)

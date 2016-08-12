@@ -9,7 +9,7 @@ def third_greatest(nums)
 	big1 = nums[0]
 	big2 = nums[1]
 	big3 = nums[2]
-	puts(nums)
+	
 	while i < nums.length
 		if nums[i] > nums[i + 1]
 			big1 = nums[i]
