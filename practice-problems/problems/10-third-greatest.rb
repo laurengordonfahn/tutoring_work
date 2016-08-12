@@ -9,7 +9,8 @@ def third_greatest(nums)
 	big1 = nums[0]
 	big2 = nums[1]
 	big3 = nums[2]
-	while i > nums.length
+	puts(nums)
+	while i < nums.length
 		if nums[i] > nums[i + 1]
 			big1 = nums[i]
 		else 
@@ -24,7 +25,7 @@ def third_greatest(nums)
 
 	nums.delete_at(big1index)
 
-	while i > nums.length
+	while i < nums.length
 		if nums[i] > nums[i + 1]
 			big2 = nums[i]
 		else 
@@ -37,7 +38,7 @@ def third_greatest(nums)
 
 	nums.delete_at(big2index)
 
-	while i > nums.length
+	while i < nums.length
 		if nums[i] > nums[i + 1]
 			big3 = nums[i]
 		else 

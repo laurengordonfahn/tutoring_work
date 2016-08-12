@@ -6,8 +6,9 @@
 
 def two_sum(nums)
 	i = 0
-	j = i + 1
 	while i < nums.length
+		j = i + 1
+
 		while j < nums.length
 			if nums[i] + nums[j] == 0
 				return [i,j]
@@ -18,6 +19,19 @@ def two_sum(nums)
 	 	
 	 	i +=1
 	end
+
+
+	# nums.each_with_index do |idx1,e1|
+	# 	nums.each_with_index do |idx2,e2|
+	# 		if e1 + e2 == 0
+	# 			return [idx1,idx2]
+	# 		end
+	# 	end
+	# end
+
+	# for( i = 0; i<nums.length; i++){
+	# 	for(j= i+1; j<nums.length; j++)
+	# }
 
 	return nil
 end
