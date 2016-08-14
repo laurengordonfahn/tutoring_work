@@ -6,55 +6,37 @@
 
 def third_greatest(nums)
 	i = 0
-	big1 = nums[0]
-	big2 = nums[1]
-	big3 = nums[2]
-	
-	while i < nums.length
-		if nums[i] > nums[i + 1]
-			big1 = nums[i]
-		else 
-			big1 = nums[i + 1]
+	big1 = 0
+	length_of_array = nums.length
+
+	3.times do
+		nums.each do |number|
+			
+			while i < num.length
+				
+				if number == nums[i]
+					big1 = number
+				elsif number < nums[i]
+					big1 = nums[i]
+				else 
+					big1 = number
+				end
+				i++
+			end
+		
+			until length_of_array == (length_of_array - 2)
+				nums.delete(big1)
+			end
 		end
+	end	
 
-		i+=1
+	return big1	 
 
-		big1index = big1.index
-
-	end
-
-	nums.delete_at(big1index)
-
-	while i < nums.length
-		if nums[i] > nums[i + 1]
-			big2 = nums[i]
-		else 
-			big2 = nums[i + 1]
-		end
-
-		i+=1
-		big2index = big2.index
-	end
-
-	nums.delete_at(big2index)
-
-	while i < nums.length
-		if nums[i] > nums[i + 1]
-			big3 = nums[i]
-		else 
-			big3 = nums[i + 1]
-		end
-
-		i+=1
-
-		big3index = big3.index
-	end
-
-	return big3
 end
 
-# These are tests to check that your code is working. After writing
-# your solution, they should all print true.
+	
+# # These are tests to check that your code is working. After writing
+# # your solution, they should all print true.
 
 puts(
   'third_greatest([5, 3, 7]) == 3: ' +
