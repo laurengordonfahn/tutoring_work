@@ -26,6 +26,7 @@ def third_greatest(nums)
 		
 			until length_of_array == (length_of_array - 2)
 				nums.delete(big1)
+				
 			end
 		end
 	end	
