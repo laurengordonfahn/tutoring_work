@@ -4,36 +4,46 @@
 #
 # Difficulty: medium.
 
-def third_greatest(nums)
+def biggestnumber_delete(nums)
 	i = 0
-	big1 = 0
-	length_of_array = nums.length
-
-	3.times do
-		nums.each do |number|
+	big1 = nums[0]
 			
-			while i < num.length
-				
-				if number == nums[i]
-					big1 = number
-				elsif number < nums[i]
-					big1 = nums[i]
-				else 
-					big1 = number
-				end
-				i++
-			end
+	while i < nums.length
 		
-			until length_of_array == (length_of_array - 2)
-				nums.delete(big1)
-				
-			end
+		if big1 < nums[i]
+			big1 = nums[i]
 		end
-	end	
+	i+=1
+	end
+	
+	nums.delete(big1)
+
+	return nums
+end
+	
+	
+	
+def third_greatest(nums)
+	2.times do
+		biggestnumber_delete(nums)
+	end
+
+
+	i = 0
+	big1 = nums[0]
+			
+	while i < nums.length
+		
+		if big1 < nums[i]
+			big1 = nums[i]
+		end
+	i+=1
+	end
+	
 
 	return big1	 
-
 end
+
 
 	
 # # These are tests to check that your code is working. After writing

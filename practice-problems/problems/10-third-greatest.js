@@ -7,9 +7,9 @@
 function third_greatest(nums){
 	var big1 = nums[0];
 	var big1index = 0;
-	for (i=0; i < 2; i ++) {
-		for (k=0; i <1; i++) {
-			for (j=0; j < nums.length; i++) {
+	for (i=0; i < 2; i ++){
+		for (k=0; i <1; i++){
+			for (j=0; j < nums.length; i++){
 				if(nums[j] > big1){
 					big1 = nums[j];
 					big1index = j
