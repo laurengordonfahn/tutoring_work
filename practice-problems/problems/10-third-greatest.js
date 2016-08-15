@@ -21,17 +21,22 @@ function delete_biggest(nums){
 
 	for(i = 0; i < nums.length; i++){
 		if(nums[i] > big1){
-			big1 = nums [i];
-			big1index = 0;
+			big1 = nums[i];
+			big1index = i;
 		}
 	}
-	nums.splice(big1index);
+		console.log(big1);
+		console.log(big1index);
+		console.log(nums);
+		nums.splice(big1index, 1);
+
+	console.log("this is delete_biggest nums " + nums);
 
 	return nums
 }
 
-function third_greatest(){
-	var nums = get_nums();
+function third_greatest(nums){
+	// var nums = get_nums();
 	var nums = delete_biggest(nums);
 	var nums = delete_biggest(nums);
 
@@ -42,11 +47,12 @@ function third_greatest(){
 			big1index = 0;
 		}
 	}
+	console.log("this is the thrid largest number" + big1)
 	return big1;
 
 }
 
-console.log(third_greatest());
+console.log(third_greatest([4 ,2, 3]));
 
 // I WANT TO TALK ABOUT HOW TO SET THIS UP SO IT DOESN"T GET STUCK INSIDE
 // function third_greatest(nums){
