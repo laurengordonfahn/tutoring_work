@@ -23,6 +23,19 @@ def is_prime?(number)
 end
 
 def nth_prime(n)
+  prime_array = []
+  i = 1
+  puts prime_array.length
+  until prime_array.length == (n)
+    if is_prime?(i)
+      prime_array << i
+    end
+
+    i+=1
+
+  end
+  puts prime_array[n-1]
+  return prime_array[n-1]
 end
 
 # These are tests to check that your code is working. After writing
