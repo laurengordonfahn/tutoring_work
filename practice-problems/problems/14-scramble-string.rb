@@ -4,7 +4,36 @@
 #
 # Difficulty: medium.
 
+
+
 def scramble_string(string, positions)
+
+
+	string_array = string.split("")
+	hash = {}
+	i = 0
+	while i < string.length
+		hash[positions[i]] = string_array[i]
+		puts "this is the hash #{hash}"
+		i += 1
+	end
+
+	new_string = ""
+	j = 0
+
+	while j < string.length
+		new_string = new_string + hash[j]
+		puts "this is the new string #{new_string}"
+		j +=1
+	end
+
+
+	return new_string
+	
+	
+
+
+
 end
 
 # These are tests to check that your code is working. After writing
@@ -15,6 +44,7 @@ puts(
   (scramble_string("abcd", [3, 1, 2, 0]) == "dbca").to_s
 )
 puts(
-  'scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm"): ' +
-  (scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm").to_s
+  'scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vroakm"): ' +
+  (scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vroakm").to_s
 )
+# last test was in the wrong order! fixed it

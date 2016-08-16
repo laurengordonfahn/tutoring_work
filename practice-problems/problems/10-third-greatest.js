@@ -6,10 +6,10 @@
 
 
 function get_nums(){
-	var num1 = window.prompt("Give me a number");
+	var num1 = prompt("Give me a number");
 	var num2 = window.prompt("Give me a second number");
 	var num3 = window.prompt("Give me a third number");
-
+	console.log(num1)
 	var nums = new Array(num1, num2, num3);
 
 	return nums
@@ -35,7 +35,7 @@ function delete_biggest(nums){
 	return nums
 }
 
-function third_greatest(nums){
+function third_greatest(){
 	// var nums = get_nums();
 	var nums = delete_biggest(nums);
 	var nums = delete_biggest(nums);
@@ -43,16 +43,16 @@ function third_greatest(nums){
 	var big1 = nums[0];
 	for(i = 0; i < nums.length; i++){
 		if(nums[i] > big1){
-			big1 = nums [i];
+			big1 = nums[i];
 			big1index = 0;
 		}
 	}
-	console.log("this is the thrid largest number" + big1)
+	console.log("this is the thrid largest number" + big1);
 	return big1;
 
 }
 
-console.log(third_greatest([4 ,2, 3]));
+console.log(third_greatest([2, 5, 1]));
 
 // I WANT TO TALK ABOUT HOW TO SET THIS UP SO IT DOESN"T GET STUCK INSIDE
 // function third_greatest(nums){
