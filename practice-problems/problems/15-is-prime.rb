@@ -11,14 +11,49 @@
 # challenge.
 #
 # Difficulty: medium.
+def is_odd(number)
+	if(number%2 != 0)
+		return true
+	else
+		return false
+	end
+end
+
+
 
 def is_prime?(number)
+	if number <= 3 
+		return true
+	end
+	
+	if is_odd(number)
+		i = 3 
+		flag = false
+		while i <= Math.sqrt(number)
+			
+			if number%i != 0
+				puts "i = #{i}"
+				flag = true
+				puts "flag is #{flag}"
+			else
+				return false
+			end
+
+			i+=1
+		end
+	else
+		flag = false
+	end
+
+	puts "this is the flag #{flag} for the number #{number}."
+	return flag
+
 end
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
-puts('is_prime?(2) == true: ' + (is_prime?(2) == true).to_s)
-puts('is_prime?(3) == true: ' + (is_prime?(3) == true).to_s)
-puts('is_prime?(4) == false: ' + (is_prime?(4) == false).to_s)
+# puts('is_prime?(2) == true: ' + (is_prime?(2) == true).to_s)
+# puts('is_prime?(3) == true: ' + (is_prime?(3) == true).to_s)
+# puts('is_prime?(4) == false: ' + (is_prime?(4) == false).to_s)
 puts('is_prime?(9) == false: ' + (is_prime?(9) == false).to_s)
