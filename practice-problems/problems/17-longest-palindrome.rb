@@ -30,26 +30,39 @@ def palindrome?(string)
 end
 
 
-def find_same_letter(string)
+def longest_palindrome(string)
   i = 0
  
   mini_string = ""
-  array_pal = []
+  longest_mini = ""
+  array_long_j = [0]
 
-  until i < string.length
+  while i < string.length
     j = 1
-    until string[i] == string[j]
-      mini_string = string.slice(i, j-i)
-      puts mini_string
-      if palindrome?(min_string)
-       array_pal<< i
-        array_pal<<j
-
-       array_length = array_pal.length
+    while j < string.length
+      if string[i] == string[j]
+        mini_string = string.slice(i, (j-i+1))
+        puts "this is mini_string #{mini_string} when i= #{i} & j=#{j}"
+        
+        if palindrome?(mini_string)
+          if mini_string.length > longest_mini.length
+            longest_mini = mini_string
+            array_long_j =[j]
+          end
+        end
       end
+
+      puts "this is longest_mini #{longest_mini}"
       j+=1
+    
     end
+
+    if array_long_j[0] > (string.length - i)
+      return longest_mini
+    end
+      
     i+=1
+   
   end
 end
 
@@ -58,8 +71,7 @@ end
 
 
 
-def longest_palindrome(string)
-end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

@@ -35,7 +35,7 @@ function delete_biggest(nums){
 	return nums
 }
 
-function third_greatest(){
+function third_greatest(nums){
 	// var nums = get_nums();
 	var nums = delete_biggest(nums);
 	var nums = delete_biggest(nums);
