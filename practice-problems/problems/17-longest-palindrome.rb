@@ -29,6 +29,35 @@ def palindrome?(string)
   return true
 end
 
+
+def find_same_letter(string)
+  i = 0
+ 
+  mini_string = ""
+  array_pal = []
+
+  until i < string.length
+    j = 1
+    until string[i] == string[j]
+      mini_string = string.slice(i, j-i)
+      puts mini_string
+      if palindrome?(min_string)
+       array_pal<< i
+        array_pal<<j
+
+       array_length = array_pal.length
+      end
+      j+=1
+    end
+    i+=1
+  end
+end
+
+
+
+
+
+
 def longest_palindrome(string)
 end
 
