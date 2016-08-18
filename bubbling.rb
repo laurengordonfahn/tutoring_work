@@ -1,70 +1,47 @@
 
 
-def switch(array, indicies)
-
-	# first = ""
-	# second = ""
-	# new_indicies = []
-
-	# new_indicies[0] = indicies[1]
-	# new_indicies[1] = indicies[0]
-
-	# puts new_indicies
-
+def switch(array, index)
 	i = 0
-	new_array = []
+	new_array =[]
 	while i < array.length
-		
-		j = 0 
-		while j < indicies.length
-			
-			if i == indicies[j]
-				if indicies[j]==indicies[0]
-					puts "if is running i=#{i}, j=#{j}"
-					new_array[i] = array[indicies[1]]
-					i+=1
-					puts "new_array #{new_array}"
-				else
-					puts "else is running i=#{i}, j=#{j}"
-					new_array[i] = array[indicies[0]]
-					puts "new_array #{new_array}"
-
-				end
-
-			else
-
-			new_array[i] = array[i] 
-			puts "new_array #{new_array} when i=#{i}, j=#{j}"
-
-			end	
-			j+=1
-
-
+		if i == index[0]
+			new_array << array[index[1]]
+		elsif i == index[1]
+			new_array << array[index[0]]
+		else
+			new_array << array[i]
 		end
 
-		
-	
-
-		i +=1
+		i +=1	
 	end
 	return new_array
 end
 
-puts switch(["a", "b", "c", "d","e", "f"], [1, 2])
+# puts switch(["a", "b", "c", "d","e", "f"], [3, 4])
 
 def bubbleing(array)
-	i = 0
-	j = 1
-	switch_count = [true
-	while j < array.length
-		if array[i] > array[j]
-			switch(array,[i,j])
-			switch_count = true
-		else
-			switch_count = false
+	
+	no_switch = 0
+	while switch_count != ((array.length) -1)
+		i = 0
+		j = 1
+		while j < array.length
+			
+			if array[i] > array[j]
+				array = switch(array,[i,j])
+			
+			else
+				no_switch = no_switch + 1
+				
+			end
+			j +=1
+			i +=1
 		end
-		j +=1
-		i +=1
 	end
+
+	return array
+end
+
+puts bubbleing([2, 11, 10])
 
 
