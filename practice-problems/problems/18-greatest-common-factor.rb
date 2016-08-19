@@ -5,6 +5,41 @@
 # Difficulty: medium.
 
 def greatest_common_factor(number1, number2)
+	if ((number1 || number2) == 0)
+		return 1
+	end
+	small_num = 0
+	big_num = 0
+	if number1 < number2
+		small_num = number1
+		big_num = number2
+	else 
+		small_num = number2
+		big_num = number1
+	end 
+	
+	i = 1
+	factors = []
+	while i <= small_num
+		if small_num%i == 0
+			factors.push(i)
+		end
+		i+=1
+	end
+
+	j = 0
+	big_factors = []
+	while j < factors.length
+		if big_num%factors[j] == 0
+			big_factors.push(factors[j])
+		end
+		j +=1
+	end
+	if big_factors[((big_factors.length)-1)] != nil
+		return big_factors[((big_factors.length)-1)]
+	else
+		puts "#{number1} and #{number2} have no common factors"
+	end
 end
 
 # These are tests to check that your code is working. After writing
