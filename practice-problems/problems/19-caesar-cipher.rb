@@ -24,6 +24,38 @@
 # information, we would not give it to you on the timed challenge. :-)
 
 def caesar_cipher(offset, string)
+	alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+	i = 0
+	new_string = ""
+	ind = 0
+
+	puts string.length 
+
+	while i < string.length
+		
+		
+		
+		if string[i] == " "
+			new_string = new_string + " "
+			
+		else 
+			ind = alph.index(string[i])
+			
+			if (ind + offset) > 25
+				ind = (ind + offset) - 26 
+				
+				new_string = new_string + alph[(ind)]
+				
+			else 
+				new_string = new_string + alph[(ind + offset)]
+				
+			end
+		end
+		i +=1
+	end
+
+	return new_string
+
 end
 
 # These are tests to check that your code is working. After writing
