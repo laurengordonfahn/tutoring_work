@@ -7,12 +7,15 @@
 def nearby_az(string)
 	string_array = string.split("")
 	if (string_array.include?("a") && string_array.include?("z"))
-		if string_array.index("z") - string_array.index("a") <=3
+		if (string_array.index("z") - string_array.index("a") <=3 && string_array.index("z") - string_array.index("a")> 0 )
+			puts "returning true1"
 			return true
 		else
+			puts "returning false1"
 			return false
 		end
 	else
+		puts "returning false2"
 		return false
 	end
 

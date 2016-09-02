@@ -7,6 +7,25 @@
 # Difficulty: hard.
 
 def num_repeats(string)
+	alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+	
+	i = 0
+	repeated_letter = {}
+	while i < string.length
+		repeat_num = 0
+		if string.count(string[i]) > 1
+			repeat_num = string.count(string[i])
+			repeated_letter[string[i]] = repeat_num
+
+		end
+
+		i +=1
+	end
+	array = []
+	array = repeated_letter.keys
+	puts array
+	return array.length
+
 end
 
 # These are tests to check that your code is working. After writing

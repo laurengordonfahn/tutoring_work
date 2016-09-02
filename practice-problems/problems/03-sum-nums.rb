@@ -10,7 +10,8 @@ def sum_nums(num)
 		sum_of_num = sum_of_num + i
 		i +=1
 	end
-	sum_of_num 
+	puts sum_of_num
+	return sum_of_num 
 end
 
 # These are tests to check that your code is working. After writing
