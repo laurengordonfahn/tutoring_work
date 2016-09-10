@@ -17,9 +17,9 @@ def most_common_letter(string):
 		count_list.append([string[i], count])
 		i +=1
 	for array1 in count_list:
-		for array2 in count_list:
-			if array1[1] > array2[1]
-				count_list.pop(array2)
+		for ind, array2 in count_list:
+			if array1[1] > array2[1]:
+				count_list.pop(ind)
 	return count_list[0]
 
 
